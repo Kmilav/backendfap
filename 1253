@@ -1,0 +1,22 @@
+
+    <?php
+        $n = intval(readline());
+
+        for ($x = 0; $x < $n; $x++) {
+            $p = readline();
+            $s = intval(readline());
+
+            for ($y = 0, $tam = strlen($p); $y < $tam; $y++) {
+                $p[$y] = strtoupper($p[$y]);
+                if (ord($p[$y]) - $s < 65) {
+                    $p[$y] = chr(ord($p[$y]) + 26);
+                }
+                $p[$y] = chr(ord($p[$y]) - $s);
+                echo $p[$y];
+            }
+
+            echo "\n";
+        }
+
+    ?>
+  
